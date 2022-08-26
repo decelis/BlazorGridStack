@@ -1,0 +1,44 @@
+﻿@page "/"
+@using BlazorGridStack.Models
+
+@code {
+    BlazorGridStackBody? Grid;
+
+    public void AddElementClicked()
+    {
+        Grid.AddWidget(new BlazorGridStackWidgetOptions
+        {
+            W = 1,
+            H = 1
+        });
+    }
+
+    public void CompactClicked()
+    {
+        Grid.Compact();
+    }
+
+    public void DisableClicked()
+    {
+        Grid.Disable();
+    }
+
+    public void EnableClicked()
+    {
+        Grid.Enable();
+    }
+
+    public void ClearClicked()
+    {
+        Grid.RemoveAll();
+    }
+}
+
+<PageTitle>BlazorGridStack Demo</PageTitle>
+
+<button onclick="@AddElementClicked">Add Element</button>
+<button onclick="@CompactClicked">Compact</button>
+<button onclick="@DisableClicked">Disable</button>
+<button onclick="@EnableClicked">Enable</button>
+<button onclick="@ClearClicked">Clear</button>
+<BlazorGridStackBody @ref="Grid"></BlazorGridStackBody>

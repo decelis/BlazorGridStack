@@ -5,7 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>1.0.2</Version>
+    <Version>1.0.1</Version>
     <Authors>Decelis</Authors>
     <Description>gridstack.js port for Blazor</Description>
     <PackageProjectUrl>https://github.com/decelis/BlazorGridStack</PackageProjectUrl>

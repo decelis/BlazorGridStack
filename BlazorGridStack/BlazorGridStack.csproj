@@ -11,6 +11,7 @@
     <PackageProjectUrl>https://github.com/decelis/BlazorGridStack</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/decelis/BlazorGridStack</RepositoryUrl>
+    <PackageTags>gridstack;blazor;js</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

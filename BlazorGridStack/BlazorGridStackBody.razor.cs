@@ -97,6 +97,18 @@ namespace BlazorGridStack
         }
 
         /// <summary>
+        /// Creates new widget and returns it. Options is an object containing the fields x,y,width,height,etc...
+        /// Parameters:
+        /// Widget will be always placed even if result height is more than actual grid height. You need to use willItFit method before calling addWidget for additional check.
+        /// </summary>
+        /// <param name="options">id of the element to add</param>
+        /// <returns></returns>
+        public Task AddWidget(string id)
+        {
+            return GridJs.AddWidget(id);
+        }
+
+        /// <summary>
         /// use before calling a bunch of addWidget() to prevent un-necessary relayouts in between (more efficient) and get a single event callback. You will see no changes until batchUpdate(false) is called.
         /// </summary>
         /// <param name="flag"></param>

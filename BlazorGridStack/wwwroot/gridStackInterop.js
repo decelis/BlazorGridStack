@@ -82,6 +82,11 @@ export function init(options, interopReference)
         });
 
     //methods
+    grid.addWidgetById = (id) =>
+    {
+        return grid.addWidget(document.getElementById(id));
+    }
+
     grid.getGridItemsForBlazor = () =>
     {
         return grid.getGridItems.map(i => { return generateGridWidgetObject(i) });

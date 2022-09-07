@@ -32,6 +32,12 @@
     {
         Grid.RemoveAll();
     }
+
+    public async void GetItemsClicked()
+    {
+        var gridItems = await Grid.GetGridItems();
+        Console.WriteLine(gridItems);
+    }
 }
 
 <PageTitle>BlazorGridStack Demo</PageTitle>
@@ -41,4 +47,5 @@
 <button onclick="@DisableClicked">Disable</button>
 <button onclick="@EnableClicked">Enable</button>
 <button onclick="@ClearClicked">Clear</button>
+<button onclick="@GetItemsClicked">GetItems</button>
 <BlazorGridStackBody @ref="Grid"></BlazorGridStackBody>

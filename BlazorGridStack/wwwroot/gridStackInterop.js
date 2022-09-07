@@ -89,7 +89,7 @@ export function init(options, interopReference)
 
     grid.getGridItemsForBlazor = () =>
     {
-        return grid.getGridItems().map(i => { return generateGridWidgetObject(i) });
+        return grid.getGridItems().map(i => { return generateGridWidgetObjectFromElement(i) });
     }
 
     grid.makeWidgetById = (id) =>
@@ -154,7 +154,7 @@ function generateGridWidgetObjectFromElement(element)
             h: parseInt(element.getAttribute("gs-h")),
             w: parseInt(element.getAttribute("gs-w")),
             content: element.querySelector(".grid-stack-item-content").innerHTML,
-            class: element.className,
+            className: element.className,
             id: element.id
         }
 }

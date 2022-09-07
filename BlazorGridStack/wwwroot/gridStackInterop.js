@@ -89,7 +89,7 @@ export function init(options, interopReference)
 
     grid.getGridItemsForBlazor = () =>
     {
-        return grid.getGridItems.map(i => { return generateGridWidgetObject(i) });
+        return grid.getGridItems().map(i => { return generateGridWidgetObject(i) });
     }
 
     grid.makeWidgetById = (id) =>

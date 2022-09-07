@@ -8,6 +8,6 @@ namespace BlazorGridStack.Models
 {
     public class BlazorGridStackWidgetEventArgs
     {
-        public BlazorGridWidget Item { get; set; }
+        public BlazorGridStackWidgetData Item { get; set; }
     }
 }

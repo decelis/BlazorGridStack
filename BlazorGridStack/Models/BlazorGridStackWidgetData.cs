@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BlazorGridStack.Models
 {
-    public class BlazorGridWidget
+    public class BlazorGridStackWidgetData
     {
 
         public string Content { get; set; }

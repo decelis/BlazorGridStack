@@ -2,6 +2,6 @@
 
 public class BlazorGridStackDroppedEventArgs
 {
-    public BlazorGridWidget? PreviousWidget { get; set; }
-    public BlazorGridWidget NewWidget { get; set; }
+    public BlazorGridStackWidgetData? PreviousWidget { get; set; }
+    public BlazorGridStackWidgetData NewWidget { get; set; }
 }

@@ -125,9 +125,9 @@ namespace BlazorGridStack
             return await GridInstance.InvokeAsync<int>("getColumn");
         }
 
-        public async Task<IEnumerable<BlazorGridStackWidget>> GetGridItems()
+        public async Task<IEnumerable<BlazorGridStackWidgetData>> GetGridItems()
         {
-            return await GridInstance.InvokeAsync<IEnumerable<BlazorGridStackWidget>>("getGridItemsForBlazor");
+            return await GridInstance.InvokeAsync<IEnumerable<BlazorGridStackWidgetData>>("getGridItemsForBlazor");
         }
 
         public async Task<int> GetMargin()
@@ -262,13 +262,13 @@ namespace BlazorGridStack
         }
 
         [JSInvokable]
-        public void AddedFired(BlazorGridWidget[] widgets)
+        public void AddedFired(BlazorGridStackWidgetData[] widgets)
         {
             OnAdded?.Invoke(this, new BlazorGridStackWidgetListEventArgs { Items = widgets });
         }
 
         [JSInvokable]
-        public void ChangeFired(BlazorGridWidget[] widgets)
+        public void ChangeFired(BlazorGridStackWidgetData[] widgets)
         {
             OnChange?.Invoke(this, new BlazorGridStackWidgetListEventArgs { Items = widgets });
         }
@@ -280,25 +280,25 @@ namespace BlazorGridStack
         }
 
         [JSInvokable]
-        public void DragStartFired(BlazorGridWidget widget)
+        public void DragStartFired(BlazorGridStackWidgetData widget)
         {
             OnDragStart?.Invoke(this, new BlazorGridStackWidgetEventArgs { Item = widget });
         }
 
         [JSInvokable]
-        public void DragFired(BlazorGridWidget widget)
+        public void DragFired(BlazorGridStackWidgetData widget)
         {
             OnDrag?.Invoke(this, new BlazorGridStackWidgetEventArgs { Item = widget });
         }
 
         [JSInvokable]
-        public void DragStopFired(BlazorGridWidget widget)
+        public void DragStopFired(BlazorGridStackWidgetData widget)
         {
             OnDragStop?.Invoke(this, new BlazorGridStackWidgetEventArgs { Item = widget });
         }
 
         [JSInvokable]
-        public void DroppedFired(BlazorGridWidget? previousWidget, BlazorGridWidget newWidget)
+        public void DroppedFired(BlazorGridStackWidgetData? previousWidget, BlazorGridStackWidgetData newWidget)
         {
             OnDropped?.Invoke(this, new BlazorGridStackDroppedEventArgs { NewWidget = newWidget, PreviousWidget = previousWidget });
         }
@@ -310,25 +310,25 @@ namespace BlazorGridStack
         }
 
         [JSInvokable]
-        public void RemovedFired(BlazorGridWidget[] widgets)
+        public void RemovedFired(BlazorGridStackWidgetData[] widgets)
         {
             OnRemoved?.Invoke(this, new BlazorGridStackWidgetListEventArgs { Items = widgets });
         }
 
         [JSInvokable]
-        public void ResizeStartFired(BlazorGridWidget widget)
+        public void ResizeStartFired(BlazorGridStackWidgetData widget)
         {
             OnResizeStart?.Invoke(this, new BlazorGridStackWidgetEventArgs { Item = widget });
         }
 
         [JSInvokable]
-        public void ResizeFired(BlazorGridWidget widget)
+        public void ResizeFired(BlazorGridStackWidgetData widget)
         {
             OnResize?.Invoke(this, new BlazorGridStackWidgetEventArgs { Item = widget });
         }
 
         [JSInvokable]
-        public void ResizeStopFired(BlazorGridWidget widget)
+        public void ResizeStopFired(BlazorGridStackWidgetData widget)
         {
             OnResizeStop?.Invoke(this, new BlazorGridStackWidgetEventArgs { Item = widget });
         }

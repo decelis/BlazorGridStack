@@ -259,7 +259,7 @@ namespace BlazorGridStack
         /// Return list of GridItem HTML elements (excluding temporary placeholder) in DOM order, wether they are node items yet or not (looks by class)
         /// </summary>
         /// <returns></returns>
-        public Task<IEnumerable<BlazorGridStackWidget>> GetGridItems()
+        public Task<IEnumerable<BlazorGridStackWidgetData>> GetGridItems()
         {
             return GridJs.GetGridItems();
         }

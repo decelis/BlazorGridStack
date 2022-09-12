@@ -82,9 +82,14 @@ export function init(options, interopReference)
         });
 
     //methods
+    grid.addWidgetForBlazor = (widgetOptions) =>
+    {
+        return generateGridWidgetObjectFromElement(grid.addWidget(widgetOptions));
+    }
+
     grid.addWidgetById = (id) =>
     {
-        return grid.addWidget(document.getElementById(id));
+        return generateGridWidgetObjectFromElement(grid.addWidget(document.getElementById(id)));
     }
 
     grid.getGridItemsForBlazor = () =>
@@ -140,7 +145,7 @@ function generateGridWidgetObject(widget)
             y: widget.y,
             h: widget.h,
             w: widget.w,
-            content: widget.content,
+            content: widget.el? widget.el.innerHTML : null,
             className: widget.el? widget.el.className : null,
             id: widget.id
         }

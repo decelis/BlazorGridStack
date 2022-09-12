@@ -42,7 +42,7 @@ namespace BlazorGridStack
 
         public async Task<BlazorGridStackWidget> AddWidget(BlazorGridStackWidgetOptions widgetOptions)
         {
-            return await GridInstance.InvokeAsync<BlazorGridStackWidget>("addWidget", widgetOptions);
+            return await GridInstance.InvokeAsync<BlazorGridStackWidget>("addWidgetForBlazor", widgetOptions);
         }
 
         public async Task<BlazorGridStackWidget> AddWidget(string id)

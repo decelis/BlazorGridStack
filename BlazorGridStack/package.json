@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "gridstack": "^6.0.0"
+    "gridstack": "^7.1.0"
   }
 }

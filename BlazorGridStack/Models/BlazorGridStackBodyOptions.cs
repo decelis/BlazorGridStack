@@ -188,7 +188,7 @@ namespace BlazorGridStack.Models
         /// <summary>
         /// if true widgets could be removed by dragging outside of the grid. It could also be a selector string, in this case widgets will be removed by dropping them there (default: false)
         /// </summary>
-        public bool? Removable { get; set; }
+        public object? Removable { get; set; }
 
         /// <summary>
         /// time in milliseconds before widget is being removed while dragging outside of the grid. (default: 2000)

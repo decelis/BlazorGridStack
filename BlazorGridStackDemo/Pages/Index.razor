@@ -1,16 +1,30 @@
 ﻿@page "/"
 @using BlazorGridStack.Models
 
+<PageTitle>BlazorGridStack Demo</PageTitle>
+
+<button onclick="@AddElementClicked">Add Element</button>
+<button onclick="@CompactClicked">Compact</button>
+<button onclick="@DisableClicked">Disable</button>
+<button onclick="@EnableClicked">Enable</button>
+<button onclick="@ClearClicked">Clear</button>
+<button onclick="@GetItemsClicked">GetItems</button>
+<BlazorGridStackBody @ref="Grid" GridStackOptions="@(new BlazorGridStackBodyOptions {
+    Removable = ".remove"
+})"></BlazorGridStackBody>
+
+<div class="remove"></div>
+
 @code {
     BlazorGridStackBody? Grid;
 
     public void AddElementClicked()
     {
         Grid.AddWidget(new BlazorGridStackWidgetOptions
-        {
-            W = 1,
-            H = 1
-        });
+            {
+                W = 1,
+                H = 1
+            });
     }
 
     public void CompactClicked()
@@ -36,16 +50,5 @@
     public async void GetItemsClicked()
     {
         var gridItems = await Grid.GetGridItems();
-        Console.WriteLine(gridItems);
     }
 }
-
-<PageTitle>BlazorGridStack Demo</PageTitle>
-
-<button onclick="@AddElementClicked">Add Element</button>
-<button onclick="@CompactClicked">Compact</button>
-<button onclick="@DisableClicked">Disable</button>
-<button onclick="@EnableClicked">Enable</button>
-<button onclick="@ClearClicked">Clear</button>
-<button onclick="@GetItemsClicked">GetItems</button>
-<BlazorGridStackBody @ref="Grid"></BlazorGridStackBody>

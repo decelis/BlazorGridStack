@@ -147,7 +147,7 @@ function generateGridWidgetObject(widget)
             w: widget.w,
             content: widget.el? widget.el.innerHTML : null,
             className: widget.el? widget.el.className : null,
-            id: widget.id
+            id: widget.el.id
         }
 }
 

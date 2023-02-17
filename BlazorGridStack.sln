@@ -5,7 +5,9 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorGridStack", "BlazorGridStack\BlazorGridStack.csproj", "{69C43432-BE2D-412D-96C1-42F428FCAD11}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorGridStackDemo", "BlazorGridStackDemo\BlazorGridStackDemo.csproj", "{8D217B32-940E-4062-B834-F3EAC387D8EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorGridStackServerModeDemo", "BlazorGridStackDemo\BlazorGridStackServerModeDemo.csproj", "{8D217B32-940E-4062-B834-F3EAC387D8EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorGridStackWebAssemblyDemo", "BlazorGridStackWebAssemblyDemo\BlazorGridStackWebAssemblyDemo.csproj", "{DDAC0392-9090-493B-A58B-57660555FA16}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{8D217B32-940E-4062-B834-F3EAC387D8EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D217B32-940E-4062-B834-F3EAC387D8EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D217B32-940E-4062-B834-F3EAC387D8EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDAC0392-9090-493B-A58B-57660555FA16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDAC0392-9090-493B-A58B-57660555FA16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDAC0392-9090-493B-A58B-57660555FA16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDAC0392-9090-493B-A58B-57660555FA16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

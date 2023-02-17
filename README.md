@@ -1,6 +1,7 @@
 # BlazorGridStack
 
 gridstack.js port for Blazor
+Compatible with Blazor **server mode** and **WASM**
 
 
 ## Nugget package
@@ -8,6 +9,22 @@ gridstack.js port for Blazor
 https://www.nuget.org/packages/BlazorGridStack/1.0.0
 
 
+## Installation
+
+Install the nugget package through nugget manager or
+
+```
+dotnet add package MudBlazor
+```
+
+Import the following
+
+```razor
+@using BlazorGridStack
+@using BlazorGridStack.Models
+```
+
+then simply add the markup shown in the **Usage/Examples** section. Javascript and css files are loaded automatically.
 
 ## Usage/Examples
 
